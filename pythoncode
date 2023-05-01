@@ -1,0 +1,23 @@
+from google.colab import drive
+drive.mount('/gdrive')
+%cd /gdrive
+
+path = "/content/drive/MyDrive/traffic/traffic.csv"
+
+path = "/content/drive/MyDrive/traffic/traffic.csv"
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+
+df_dataset=pd.read_csv(path)
+df.head(5)
+
+df_dataset.info()
+convert_dict = {'Junction': float
+               }
+  
+df_dataset= df_dataset.astype(convert_dict)
+
+X=df_dataset.values
+y=df_dataset.iloc[38496:48120,0:3].values
+print(X.shape,y.shape)
